@@ -1,0 +1,4 @@
+FROM scratch
+MAINTAINER Yoni Davidson <yoni.davidson@eyesight-tech.com>
+
+ENTRYPOINT ["/no/such/file"]

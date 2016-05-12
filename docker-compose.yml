@@ -1,0 +1,14 @@
+app:
+  build: ./Dockerfiles
+  dockerfile: Dockerfile.node
+  volumes: 
+  - "${PWD}:/code"
+  volumes_from:
+  - data
+  working_dir: /code
+
+data:
+   build: ./Dockerfiles
+   dockerfile: Dockerfile.data
+   volumes:
+   - /code/node_modules
