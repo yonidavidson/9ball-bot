@@ -1,0 +1,32 @@
+{
+  "name": "9ball-facebook-bot",
+  "version": "1.0.0",
+  "description": "simple facebook bot",
+  "main": "index.js",
+  "dependencies": {
+    "body-parser-bigint": "^1.13.2",
+    "express": "^4.13.4",
+    "request": "^2.72.0"
+  },
+  "engines": {
+    "node": "6.1.x"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "mocha"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/yonidavidson/9ball-bot.git"
+  },
+  "keywords": [
+    "facebook",
+    "bot"
+  ],
+  "author": "yoni davidson",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/yonidavidson/9ball-bot/issues"
+  },
+  "homepage": "https://github.com/yonidavidson/9ball-bot#readme"
+}
