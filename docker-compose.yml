@@ -6,6 +6,13 @@ app:
   volumes_from:
   - data
   working_dir: /code
+  ports:
+    - "3301:3301"
+  environment:
+    - PORT=3301
+    - VERIFY_TOKEN=test_token
+  command:
+    npm start
 
 data:
    build: ./Dockerfiles

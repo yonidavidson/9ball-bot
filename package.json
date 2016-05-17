@@ -11,9 +11,12 @@
   "engines": {
     "node": "6.1.x"
   },
-  "devDependencies": {},
+  "devDependencies": {
+    "mocha": "^2.5.3"
+  },
   "scripts": {
-    "test": "mocha"
+    "test": "mocha",
+    "start": "npm install && node app.js"
   },
   "repository": {
     "type": "git",
