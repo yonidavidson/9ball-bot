@@ -1,4 +1,4 @@
-.PHONY:  shell build
+.PHONY:  shell run build deploy
 
 default:shell
 
@@ -8,6 +8,8 @@ shell: build
 run: build
 	docker-compose up
 
-
 build:
 	docker-compose build
+
+deploy:
+	gcloud preview app deploy
