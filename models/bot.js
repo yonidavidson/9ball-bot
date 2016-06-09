@@ -1,12 +1,15 @@
-const VERIFY_TOKEN = process.env.VERIFY_TOKEN
+module.exports = function (token) {
+    const VERIFY_TOKEN = token;
+    var module = {};
 
-exports.validate = function(token, challange) {
-	if (token === VERIFY_TOKEN) {
-		console.log("Token verified");;
-		return (challange);
-	}else{
-		console.log("Token error");;
-		return ('Error, wrong validation token')
+    module.validate = function(token, challange) {
+		if (token === VERIFY_TOKEN) {
+			console.log("Token verified");;
+			return (challange);
+		}else{
+			console.log("Token error");;
+			return ('Error, wrong validation token')
+		}
 	}
-  
-}
+    return module;
+};

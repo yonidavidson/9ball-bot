@@ -1,14 +1,13 @@
 var express = require('express')
 var router = express.Router()
-var bot = require('../models/bot')
-
-const bodyParser = require('body-parser-bigint');
-const jsonParser = bodyParser.json();
+var bot = require('../models/bot')(process.env.VERIFY_TOKEN)
+var bodyParser = require('body-parser-bigint');
+var jsonParser = bodyParser.json();
 
 router.get('/', function(req, res) {
 	const token = req.query['hub.verify_token']
 	const challenge = req.query['hub.challenge']
-	res.send(bot.validate(token,challange));
+	res.send(bot.validate(token,challenge));
 })
 
 router.post('/', jsonParser, function(req, res) {
