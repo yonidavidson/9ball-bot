@@ -2,10 +2,10 @@
 
 default:shell
 
-shell: build
+shell:
 	docker-compose run --rm app /bin/bash
 
-run: build
+run:
 	docker-compose up
 
 build:
@@ -13,3 +13,6 @@ build:
 
 deploy:
 	gcloud preview app deploy
+
+test:
+	docker-compose run --rm app npm test
