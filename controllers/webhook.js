@@ -5,10 +5,12 @@ const jsonParser = bodyParser.json();
 const verify_token = process.env.VERIFY_TOKEN
 
 router.get('/', function(req, res) {
-	if (req.query['hub.verify_token'] === verify_token) {
+	const token = req.query['hub.verify_token']
+	if (token === verify_token) {
 		console.log("Token verified");;
 		res.send(req.query['hub.challenge']);
 	}
+	console.log("hub.verify_token="+token)
 	res.send('Error, wrong validation token');
 })
 
