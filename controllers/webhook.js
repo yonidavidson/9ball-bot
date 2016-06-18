@@ -1,6 +1,6 @@
 var express = require('express')
 var router = express.Router()
-var bot = require('../models/bot')(process.env.VERIFY_TOKEN)
+var bot = require('../models/bot')(process.env.NINE_BALL_VERIFY_TOKEN)
 var bodyParser = require('body-parser-bigint');
 var jsonParser = bodyParser.json();
 

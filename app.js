@@ -3,7 +3,7 @@ var app = express();
 
 app.use(require('./controllers'))
 
-app.listen(process.env.PORT, function() {
+app.listen(8080, function() {
 	console.log('Bot running');
 });
 

@@ -21,4 +21,4 @@ skip_files:
  - ^node_modules$
 
 env_variables:
-  9BALL_PORT: 'my value'
+  NINE_BALL_VERIFY_TOKEN: fortuna_davidson
