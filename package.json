@@ -4,6 +4,7 @@
   "description": "simple facebook bot",
   "main": "index.js",
   "dependencies": {
+    "@google/cloud-debug": "^0.8.3",
     "body-parser-bigint": "^1.13.2",
     "express": "^4.13.4",
     "request": "^2.72.0"

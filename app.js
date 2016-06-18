@@ -1,3 +1,4 @@
+require('@google/cloud-debug');
 var express = require('express');
 var app = express();
 
