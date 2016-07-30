@@ -4,17 +4,19 @@
   "description": "simple facebook bot",
   "main": "index.js",
   "dependencies": {
-    "@google/cloud-debug": "^0.8.3",
     "body-parser-bigint": "^1.13.2",
     "express": "^4.13.4",
     "request": "^2.72.0"
+    
   },
   "engines": {
     "node": "6.1.x"
   },
   "devDependencies": {
     "chai": "^3.5.0",
-    "mocha": "^2.5.3"
+    "mocha": "^2.5.3",
+    "supertest": "^2.0.0",
+    "@google/cloud-debug": "^0.8.3"
   },
   "scripts": {
     "test": "mocha  --reporter spec 'tests/**/*.js'",

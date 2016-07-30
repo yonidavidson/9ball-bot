@@ -1,16 +1,17 @@
-var express = require('express')
-var router = express.Router()
-var bot = require('../models/bot')(process.env.NINE_BALL_VERIFY_TOKEN)
+var express = require('express');
+var app = express();
+var bot = require('./bot.js')
 var bodyParser = require('body-parser-bigint');
 var jsonParser = bodyParser.json();
+var VERIFY = process.env.NINE_BALL_VERIFY_TOKEN;
 
-router.get('/', function(req, res) {
+app.get('/webhook', function(req, res) {
 	const token = req.query['hub.verify_token']
 	const challenge = req.query['hub.challenge']
-	res.send(bot.validate(token,challenge));
+	res.send(bot.validate(VERIFY, token, challenge));
 })
 
-router.post('/', jsonParser, function(req, res) {
+app.post('/webhook', jsonParser, function(req, res) {
 	messaging_events = req.body.entry[0].messaging;
 	for (i = 0; i < messaging_events.length; i++) {
 		event = req.body.entry[0].messaging[i];
@@ -47,4 +48,6 @@ function sendTextMessage(sender, text) {
 	});
 }
 
-module.exports = router
+app.listen(8080, function() {
+	console.log('Bot running');
+});
