@@ -1,8 +1,0 @@
-FROM node
-MAINTAINER Yoni Davidson <yonidavidson@gmail.com>
-
-RUN apt-get update
-RUN apt-get install -y  groff less  jq python2.7 python-pip zip  && pip install awscli
-RUN echo "complete -C '/usr/local/bin/aws_completer' aws " >> /root/.bashrc
-RUN npm install -g grunt-cli modulus
-ADD ./addons/.npmrc /root/

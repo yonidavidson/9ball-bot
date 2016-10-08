@@ -1,4 +1,0 @@
-FROM alpine
-MAINTAINER Yoni Davidson <yoni.davidson@eyesight-tech.com>
-
-CMD "echo true"

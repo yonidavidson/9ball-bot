@@ -1,6 +1,6 @@
 var express = require('express');
 var app = express();
-var bot = require('./bot.js')
+var bot = require('./lib/bot.js')
 var bodyParser = require('body-parser-bigint');
 var jsonParser = bodyParser.json();
 var VERIFY = process.env.NINE_BALL_VERIFY_TOKEN;

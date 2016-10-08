@@ -1,6 +1,6 @@
 const TEST_TOKEN = 'faketoken'
 const challange = 'Fortuna'
-var bot = require('../bot.js');
+var bot = require('../lib/bot.js');
 var assert = require('chai').assert;
 
 describe('bot validate fail', function(){

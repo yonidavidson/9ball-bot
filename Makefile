@@ -1,18 +1,9 @@
-.PHONY:  shell run build deploy
+.PHONY:  deploy dummy
 
-default:shell
-
-shell:
-	docker-compose run --rm app /bin/bash
-
-run:
-	docker-compose up
-
-build:
-	docker-compose build
+default:dummy
 
 deploy:
-	gcloud preview app deploy --version 20160618t152105
+	gcloud preview app deploy ./node/app.yaml
 
-test:
-	docker-compose run --rm app npm test
+dummy:
+	echo " - empty action"
