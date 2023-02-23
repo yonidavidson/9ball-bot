@@ -1,1 +1,1 @@
-ALTER TABLE `pets` ADD COLUMN `beast` boolean NULL;
+ALTER TABLE `pets` ADD COLUMN `pook` boolean NULL;
