@@ -37,4 +37,4 @@ jobs:
           dir-format: atlas # Or: golang-migrate, goose, dbmate, flyway, liquibase
           dev-url: mysql://root:pass@localhost:3307/test
           cloud-token: ${{ secrets.ATLAS_CLOUD_TOKEN }}
-          cloud-url: https://f491-109-186-91-21.ngrok.io
+          cloud-url: https://9c15-2a02-8108-16c0-3904-00-56dd.eu.ngrok.io
